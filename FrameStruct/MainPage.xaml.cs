@@ -26,5 +26,25 @@ namespace FrameStruct
         {
             this.InitializeComponent();
         }
+
+        private void FrameDemo_Click(object sender, RoutedEventArgs e)
+        {
+            Sv_splitView.IsPaneOpen = !Sv_splitView.IsPaneOpen;
+        }
+
+        private void Sv_Lb_Cls_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (InternetListboxItem.IsSelected)
+            {
+                ResultShow.Text = "Internet";
+            }
+            else if (FavoriteListboxItem.IsSelected)
+            {
+                ResultShow.Text = "Favorites";
+            } else if (FingerListboxItem.IsSelected)
+            {
+                ResultShow.Text = "Finger";
+            }
+        }
     }
 }

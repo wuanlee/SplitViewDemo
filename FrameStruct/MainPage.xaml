@@ -8,6 +8,56 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button Name="FrameDemo"  FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;" FontSize="36" Click="FrameDemo_Click"/>
+        </RelativePanel>
+        <SplitView Name="Sv_splitView" 
+                   Grid.Row="1" 
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="300" 
+                   CompactPaneLength="56" 
+                   HorizontalAlignment="Left">
+            <SplitView.Content>
+                <TextBlock Name="ResultShow"/>
+            </SplitView.Content>
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single" Name="Sv_Lb_Cls" SelectionChanged="Sv_Lb_Cls_SelectionChanged">
+                    <ListBoxItem Name="InternetListboxItem">
+                        <StackPanel  Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"  Text="&#xE909;" FontSize="36">
 
+                            </TextBlock>
+                            <TextBlock Text="Internet" FontSize="36" Margin="20,0,0,0">
+
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="FavoriteListboxItem">
+                        <StackPanel  Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"  Text="&#xE734;" FontSize="36">
+
+                            </TextBlock>
+                            <TextBlock Text="Favorite" FontSize="36"  Margin="20,0,0,0">
+
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem  Name="FingerListboxItem">
+                        <StackPanel  Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"  Text="&#xE928;" FontSize="36">
+
+                            </TextBlock>
+                            <TextBlock Text="Finger" FontSize="36"  Margin="20,0,0,0">
+
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
     </Grid>
 </Page>
